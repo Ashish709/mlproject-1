@@ -14,7 +14,7 @@ from src.logger import logging
 # from logger import logging
 
 
-# from components.data_transformation import DataTransformation
+from src.components.data_transformaion import DataTransformation
 # from components.data_transformation import DataTransformationConfig
 # from components.model_trainer import ModelTrainingConfig,ModelTrainer
 
@@ -66,12 +66,12 @@ class DataIngestion:
 
 if __name__ == "__main__":
     obj = DataIngestion()
-    obj.initiate_data_ingestion() # test data_ingestion.py only
+    # obj.initiate_data_ingestion() # test data_ingestion.py only
 
 # to test Data transformation
-    # train_data,test_data = obj.initiate_data_ingestion()
-    # data_transformation = DataTransformation()
-    # data_transformation.initiate_data_transformation(train_data,test_data)
+    train_data,test_data = obj.initiate_data_ingestion()
+    data_transformation = DataTransformation()
+    data_transformation.initiated_data_transformation(train_data,test_data)
     
 # to test model trainer
     # train_data,test_data = obj.initiate_data_ingestion()
@@ -80,5 +80,7 @@ if __name__ == "__main__":
     
     # model_trainer = ModelTrainer()
     # print(model_trainer.initiate_model_trainer(train_arr,test_arr))
+    
+    # python src\components\data_ingestion.py
 
         
